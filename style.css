@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair Display", serif;
+}
+
+body {
+    background: rgb(112, 124, 249);
+}
+
+.quote-box {
+    background: #fff;
+    width: 50vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 4vw;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+.quote-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 5vh;
+    position: relative;
+}
+
+.quote-box h2::after {
+    content: "";
+    width: 75px;
+    height: 3px;
+    border-radius: 3px;
+    background: blue;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.quote-box blockquote {
+    font-size: 1.2em;
+    min-height: 15vh;
+}
+
+.quote-box blockquote::before,
+.quote-box blockquote::after {
+    content: ' " ';
+}
+
+.quote-box span {
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+}
+
+.quote-box span::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background: blue;
+    position: absolute;
+    top: 50%;
+    left: -30px;
+}
+
+.quote-box div {
+    width: 100%;
+    /* border: 2px solid black; */
+    margin-top: 6vh;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-box button {
+    background: rgb(23, 124, 229);
+    color: #fff;
+    border-radius: 25px;
+    border: none;
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.quote-box button img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.quote-box button:nth-child(2) {
+    background-color: transparent;
+    color: #333;
+    font-weight: 500;
+    border: 1px solid rgb(243, 121, 50);
+
+}
+
+@media (max-width: 768px) {
+    .quote-box {
+        width: 75vw;
+        font-size: .8em;
+    }
+
+    .quote-box h2 {
+        font-size: 2em;
+    }
+}
